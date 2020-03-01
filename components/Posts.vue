@@ -5,10 +5,10 @@
         <div class="coverimage">
           <img
             v-if="post.attributes.cover && post.attributes.cover.image"
-            :src="`/images/blog/${post.attributes.cover.image}`"
-            :title="`Photo von ${post.attributes.cover.photographer}`"
+            :src="getImage(post)"
+            :title="`Photo by ${post.attributes.cover.photographer}`"
           />
-          <img v-else src="/images/blog/default.jpg" title="cheng feng" />
+          <img v-else :src="getImage(post)" title="cheng feng" />
         </div>
         <div class="info">
           <div class="heading">{{ post.attributes.title }}</div>
@@ -39,6 +39,16 @@ export default {
           .split(".")[0]
       }`;
       return link;
+    },
+
+    getImage(post) {
+      let prefix = process.env.DEPLOY_ENV ? '' : '/';
+
+      if(post.attributes.cover && post.attributes.cover.image)
+        return `${prefix}images/blog/${post.attributes.cover.image}`;
+      else {
+        return `${prefix}images/blog/default.jpg`;
+      }
     },
 
     getPreview(post) {

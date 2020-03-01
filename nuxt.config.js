@@ -12,6 +12,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
     mode: 'universal',
+    /**
+     * Router configuration
+     */
     ...routerBase,
     /*
      ** Headers of the page
@@ -28,7 +31,7 @@ export default {
                 href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
             },
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-        ]
+        ],
     },
     /*
      ** Customize the progress-bar color

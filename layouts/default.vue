@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb {
   max-width: 100%;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/images/splash.jpg);
+    url(~assets/images/splash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
