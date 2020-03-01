@@ -1,0 +1,29 @@
+{
+    "name": "simple-static-nuxtjs-blog",
+    "version": "1.0.0",
+    "description": "A template to quickstart your next blog",
+    "author": "Milchreis",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+        "build:framevuerk": "framevuerk-builder -c ./framevuerk-config.js",
+        "prepublish": "npm run build:framevuerk"
+    },
+    "dependencies": {
+        "@nuxtjs/sitemap": "^2.0.1",
+        "framevuerk": "^2.2.5",
+        "frontmatter-markdown-loader": "^3.1.0",
+        "nuxt": "^2.0.0"
+    },
+    "devDependencies": {
+        "@nuxtjs/google-analytics": "^2.2.3",
+        "cross-env": "^7.0.0",
+        "framevuerk-builder": "^2.0.2",
+        "node-sass": "^4.13.1",
+        "sass-loader": "^8.0.2"
+    }
+}
