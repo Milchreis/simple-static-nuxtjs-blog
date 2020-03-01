@@ -4,6 +4,8 @@
 
 ![alt screenshot](https://raw.githubusercontent.com/Milchreis/simple-static-nuxtjs-blog/master/.github/screen.png)
 
+[Demo](https://milchreis.github.io/simple-static-nuxtjs-blog/)
+
 ## Why another repository for a static blog page?
  * Had a lot of struggle and research for this features
  * Need of basic features with and fast and simple usage
