@@ -60,10 +60,12 @@ export default {
   },
   computed: {
     splashImage() {
+      let prefix = process.env.DEPLOY_ENV ? '' : '/';
+
       if (this.meta && this.meta.cover && this.meta.cover.image) {
-        return `background-image: url(/images/blog/${this.meta.cover.image});`;
+        return `background-image: url(${prefix}images/blog/${this.meta.cover.image});`;
       } else {
-        return `background-image: url(/images/blog/default.jpg);`;
+        return `background-image: url(${prefix}images/blog/default.jpg);`;
       }
     }
   }
