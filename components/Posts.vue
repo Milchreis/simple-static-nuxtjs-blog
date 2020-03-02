@@ -44,6 +44,7 @@ export default {
     },
 
     getImage(post) {
+      console.log(process.env);
       if(post.attributes.cover && post.attributes.cover.image)
         return `${this.prefix}images/blog/${post.attributes.cover.image}`;
       else {
