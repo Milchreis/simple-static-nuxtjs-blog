@@ -1,7 +1,7 @@
 <template>
   <div id="blogpost">
     <header>
-      <div class="hero" :style="splashImage">
+      <div class="hero" :style="splash">
         <div class="hero-text"></div>
       </div>
     </header>
@@ -40,10 +40,16 @@
 export default {
   async asyncData({ params }) {
     let post = await import(`~/blog/${params.slug}.md`);
+    let prefix = process.env.DEPLOY_ENV ? '' : '/';
+
     return {
       meta: post.attributes,
       html: post.html,
-      singlePostComponent: post.component
+      singlePostComponent: post.component,
+      splash: post.attributes && post.attributes.cover && post.attributes.cover.image ?  
+        `background-image: url(${prefix}images/blog/${post.attributes.cover.image});`
+        :
+        `background-image: url(${prefix}images/blog/default.jpg);`
     };
   },
   head() {
@@ -58,17 +64,6 @@ export default {
       ]
     };
   },
-  computed: {
-    splashImage() {
-      let prefix = process.env.DEPLOY_ENV ? '' : '/';
-
-      if (this.meta && this.meta.cover && this.meta.cover.image) {
-        return `background-image: url(${prefix}images/blog/${this.meta.cover.image});`;
-      } else {
-        return `background-image: url(${prefix}images/blog/default.jpg);`;
-      }
-    }
-  }
 };
 </script>
 
