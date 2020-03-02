@@ -42,7 +42,7 @@ export default {
     let post = await import(`~/blog/${params.slug}.md`);
     let prefix = process.env.DEPLOY_ENV ? '' : '/';
     
-    console.log("slug", process.env);
+    console.log("slug", process.env.DEPLOY_ENV);
 
     return {
       meta: post.attributes,
