@@ -78,6 +78,9 @@ export default {
         },
         extractCSS: true,
     },
+    generate: {
+        routes: files
+    },
     sitemap: {
         hostname: 'http://localhost:3000',
         exclude: [],
