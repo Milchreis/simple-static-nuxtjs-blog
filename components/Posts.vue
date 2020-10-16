@@ -25,11 +25,6 @@ const path = require("path");
 
 export default {
   props: ["posts"],
-  data() {
-    return {
-      prefix: process.env.DEPLOY_ENV ? '' : '/'
-    };
-  },
   methods: {
     getPermalink(post) {
       let link = `/posts/${
@@ -45,9 +40,9 @@ export default {
 
     getImage(post) {
       if(post.attributes.cover && post.attributes.cover.image)
-        return `${this.prefix}images/blog/${post.attributes.cover.image}`;
+        return `images/blog/${post.attributes.cover.image}`;
       else {
-        return `${this.prefix}images/blog/default.jpg`;
+        return `images/blog/default.jpg`;
       }
     },
 

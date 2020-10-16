@@ -40,18 +40,15 @@
 export default {
   async asyncData({ params }) {
     let post = await import(`~/blog/${params.slug}.md`);
-    let prefix = process.env.DEPLOY_ENV ? '' : '/';
-    
-    console.log("slug", process.env.DEPLOY_ENV);
 
     return {
       meta: post.attributes,
       html: post.html,
       singlePostComponent: post.component,
       splash: post.attributes && post.attributes.cover && post.attributes.cover.image ?  
-        `background-image: url(${prefix}images/blog/${post.attributes.cover.image});`
+        `background-image: url(images/blog/${post.attributes.cover.image});`
         :
-        `background-image: url(${prefix}images/blog/default.jpg);`
+        `background-image: url(images/blog/default.jpg);`
     };
   },
   head() {

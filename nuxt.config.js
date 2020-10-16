@@ -4,11 +4,11 @@ import glob from 'glob'
 let files = glob.sync('**/*.md', { cwd: 'blog' })
 files = files.map(d => '/posts/' + d.substr(0, d.lastIndexOf('.')))
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+const routerBase = {
     router: {
-        base: '/simple-static-nuxtjs-blog/'
+        base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/simple-static-nuxtjs-blog/' : '/'
     }
-} : {}
+}
 
 export default {
     mode: 'universal',
