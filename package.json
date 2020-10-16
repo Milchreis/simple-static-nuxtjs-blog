@@ -9,7 +9,7 @@
         "build": "nuxt build",
         "start": "nuxt start",
         "generate": "nuxt generate",
-        "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+        "generate:gh-pages": "cross-env DEPLOY_ENV='GH_PAGES' nuxt generate",
         "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
         "build:framevuerk": "framevuerk-builder -c ./framevuerk-config.js",
         "prepublish": "npm run build:framevuerk"
