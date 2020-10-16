@@ -15,16 +15,16 @@
         "prepublish": "npm run build:framevuerk"
     },
     "dependencies": {
-        "@nuxtjs/sitemap": "^2.0.1",
-        "framevuerk": "^2.2.5",
-        "frontmatter-markdown-loader": "^3.1.0",
-        "nuxt": "^2.0.0"
+        "@nuxtjs/sitemap": "^2.4.0",
+        "framevuerk": "^2.4.2",
+        "frontmatter-markdown-loader": "^3.6.1",
+        "nuxt": "^2.14.7"
     },
     "devDependencies": {
-        "@nuxtjs/google-analytics": "^2.2.3",
-        "cross-env": "^7.0.0",
-        "framevuerk-builder": "^2.0.2",
-        "node-sass": "^4.13.1",
+        "@nuxtjs/google-analytics": "^2.4.0",
+        "cross-env": "^7.0.2",
+        "framevuerk-builder": "^2.0.8",
+        "node-sass": "^4.14.1",
         "push-dir": "^0.4.1",
         "sass-loader": "^8.0.2"
     }
