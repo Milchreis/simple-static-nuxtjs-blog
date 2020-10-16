@@ -21,15 +21,15 @@
         <div class="text-center">
           <div class="tagList">
             <p>
-              <span v-for="(voter, i) in meta.tags" :key="i" class="tags">{{voter}}</span>
+              <span v-for="(voter, i) in meta.tags" :key="i" class="tags">{{
+                voter
+              }}</span>
             </p>
           </div>
         </div>
 
         <div class="text-center">
-          <nuxt-link to="/posts/" class="btn">
-            Back to overview
-          </nuxt-link>
+          <nuxt-link to="/posts/" class="btn"> Back to overview </nuxt-link>
         </div>
       </div>
     </section>
@@ -45,10 +45,10 @@ export default {
       meta: post.attributes,
       html: post.html,
       singlePostComponent: post.component,
-      splash: post.attributes && post.attributes.cover && post.attributes.cover.image ?  
-        `background-image: url(images/blog/${post.attributes.cover.image});`
-        :
-        `background-image: url(images/blog/default.jpg);`
+      splash:
+        post.attributes && post.attributes.cover && post.attributes.cover.image
+          ? `background-image: url(images/blog/${post.attributes.cover.image});`
+          : `background-image: url(images/blog/default.jpg);`,
     };
   },
   head() {
@@ -58,9 +58,9 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.meta.title
-        }
-      ]
+          content: this.meta.title,
+        },
+      ],
     };
   },
 };
@@ -107,26 +107,24 @@ export default {
   }
 
   .content {
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5em;
+    h1,
+    h2,
+    h3 {
+      margin-top: 1em;
+      margin-bottom: 0.3em;
       letter-spacing: -0.05em;
       font-weight: 500;
       color: #44494f;
+    }
+
+    h1 {
+      font-size: 2rem;
     }
     h2 {
       font-size: 1.6rem;
-      margin-bottom: 0.7em;
-      letter-spacing: -0.05em;
-      font-weight: 500;
-      color: #44494f;
     }
     h3 {
       font-size: 1.4rem;
-      margin-bottom: 0.7em;
-      letter-spacing: -0.05em;
-      font-weight: 500;
-      color: #44494f;
     }
 
     a {
@@ -147,7 +145,24 @@ export default {
     }
 
     table {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1em;
       margin-bottom: 1em;
+      th {
+        background-color: #44494f;
+        border: #44494f 1px solid;
+        color: #fff;
+        padding: 0.5rem;
+      }
+      td {
+        border: #cdcdcd 1px solid;
+        padding: 0.5rem;
+      }
+
+      tr:hover {
+        background-color: #eee;
+      }
     }
   }
 
