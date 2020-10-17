@@ -1,6 +1,17 @@
 <template>
-  <nuxt />
+ <div>
+    <nuxt />
+    <to-top-button></to-top-button>
+ </div>
 </template>
+
+<script>
+import ToTopButton from "../components/ToTopButton";
+
+export default {
+  components: { ToTopButton },
+};
+</script>
 
 <style>
 :root {
