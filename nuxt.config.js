@@ -40,15 +40,11 @@ export default {
     /*
      ** Global CSS
      */
-    css: [
-        'framevuerk/dist/framevuerk-nuxt.min.css'
-    ],
+    css: [],
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [
-        '@/plugins/framevuerk',
-    ],
+    plugins: [],
     /*
      ** Nuxt.js dev-modules
      */

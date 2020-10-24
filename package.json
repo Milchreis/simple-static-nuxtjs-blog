@@ -10,20 +10,16 @@
         "start": "nuxt start",
         "generate": "nuxt generate",
         "generate:gh-pages": "cross-env DEPLOY_ENV='GH_PAGES' nuxt generate",
-        "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-        "build:framevuerk": "framevuerk-builder -c ./framevuerk-config.js",
-        "prepublish": "npm run build:framevuerk"
+        "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
     },
     "dependencies": {
         "@nuxtjs/sitemap": "^2.4.0",
-        "framevuerk": "^2.4.2",
-        "frontmatter-markdown-loader": "^3.6.1",
         "nuxt": "^2.14.7"
     },
     "devDependencies": {
         "@nuxtjs/google-analytics": "^2.4.0",
         "cross-env": "^7.0.2",
-        "framevuerk-builder": "^2.0.8",
+        "frontmatter-markdown-loader": "^3.6.1",
         "node-sass": "^4.14.1",
         "push-dir": "^0.4.1",
         "sass-loader": "^8.0.2"

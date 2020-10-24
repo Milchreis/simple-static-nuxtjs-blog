@@ -149,6 +149,8 @@ export default {
       margin-right: auto;
       margin-top: 1em;
       margin-bottom: 1em;
+      border-spacing: 0 0;
+
       th {
         background-color: #44494f;
         border: #44494f 1px solid;
